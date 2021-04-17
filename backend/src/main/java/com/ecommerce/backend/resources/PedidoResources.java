@@ -38,9 +38,4 @@ public class PedidoResources {
 	public void delete(@PathVariable("id") Long id) {
 		pedidoRepository.deleteById(id);
 	}
-	
-	@PutMapping
-	public void put(@RequestBody Pedido pedido) {
-		pedidoRepository.save(pedido);
-	}
 }

@@ -1,20 +1,12 @@
 package com.ecommerce.backend.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-public class Produto implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class Produto {
 	
 	@Id
-	
 	/*
 	 * Atributos
 	 */
@@ -22,7 +14,7 @@ public class Produto implements Serializable {
 	private String codigo;
 	private String nome;
 	private long precoUnitario;
-	private String imgUrl;
+	private String imagemUrl;
 	
 	/*
 	 * Construtores
@@ -31,14 +23,14 @@ public class Produto implements Serializable {
 		
 	}
 	
-	public Produto(String id, String codigo, String nome, long precoUnitario, String imgUrl) {
+	public Produto(String id, String codigo, String nome, long precoUnitario, String imagemUrl) {
 		this.id = id;
 		this.codigo = codigo;
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;
-		this.imgUrl = imgUrl;
+		this.imagemUrl = imagemUrl;
 	}
-
+	
 	/*
 	 * Getters and Setters
 	 */
@@ -70,11 +62,11 @@ public class Produto implements Serializable {
 		this.precoUnitario = precoUnitario;
 	}
 	
-	public String getImgUrl() {
-		return imgUrl;
+	public String getImagemUrl() {
+		return imagemUrl;
 	}
 
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
+	public void setImagemUrl(String imagemUrl) {
+		this.imagemUrl = imagemUrl;
 	}
 }

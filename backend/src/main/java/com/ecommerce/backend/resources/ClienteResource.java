@@ -38,9 +38,4 @@ public class ClienteResource {
 	public void delete(@PathVariable("id") Long id) {
 		clienteRepository.deleteById(id);
 	}
-	
-	@PutMapping
-	public void put(@RequestBody Cliente cliente) {
-		clienteRepository.save(cliente);
-	}
 }
