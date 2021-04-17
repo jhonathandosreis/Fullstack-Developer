@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-toolbar',
+  templateUrl: './toolbar.component.html',
+  styleUrls: ['./toolbar.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class ToolbarComponent implements OnInit {
 
   logo = 'assets/icones/logotipo-maximatech.png';
 
