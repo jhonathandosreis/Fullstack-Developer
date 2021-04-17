@@ -29,7 +29,7 @@ public class ClienteResource {
 		return clienteRepository.findAll();
 	}
 	
-	@PostMapping
+	@PostMapping("/{id}")
 	public void post(@RequestBody Cliente cliente) {
 		clienteRepository.save(cliente);
 	}
