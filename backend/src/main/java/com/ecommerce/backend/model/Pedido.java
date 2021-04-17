@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 public class Pedido implements Serializable {
@@ -14,12 +15,11 @@ public class Pedido implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+
 	/*
 	 * Atributos
 	 */
-	private long id;
+	private String id;
 	
 	@ManyToOne
 	private Cliente Cliente;
@@ -29,9 +29,14 @@ public class Pedido implements Serializable {
 	private Double valorFrete;
 	
 	/*
-	 * Construtor
+	 * Construtores
 	 */
-	public Pedido(long id, int qntItens, Double valorTotal, Double valorFrete) {
+	
+	public Pedido() {
+		
+	}
+	
+	public Pedido(String id, int qntItens, Double valorTotal, Double valorFrete) {
 		
 		this.id = id;
 		this.qntItens = qntItens;
@@ -42,7 +47,7 @@ public class Pedido implements Serializable {
 	/*
 	 * Getters and Setters
 	 */
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 

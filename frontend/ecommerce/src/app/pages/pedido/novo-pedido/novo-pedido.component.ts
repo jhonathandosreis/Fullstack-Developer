@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoPedidoComponent implements OnInit {
 
+  iconCliente = 'assets/icones/icone-cliente.png';
+  iconCarrinho = 'assets/icones/icone-carrinho.png';
+  iconTotal = 'assets/icones/icone-total.png';
+  impressaoCliente: any;
+
   constructor() { }
 
   ngOnInit(): void {
