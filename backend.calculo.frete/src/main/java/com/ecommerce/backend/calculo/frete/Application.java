@@ -1,13 +1,13 @@
-package com.ecommerce.calculofrete;
+package com.ecommerce.backend.calculo.frete;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CalculoFreteApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CalculoFreteApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

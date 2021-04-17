@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ecommerce</groupId>
-	<artifactId>calculo-frete</artifactId>
+	<artifactId>backend.calculo.frete</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>calculo-frete</name>
+	<name>backend.calculo.frete</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

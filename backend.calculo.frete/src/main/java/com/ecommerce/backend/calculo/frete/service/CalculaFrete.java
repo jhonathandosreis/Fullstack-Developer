@@ -1,4 +1,4 @@
-package com.ecommerce.calculofrete.service;
+package com.ecommerce.backend.calculo.frete.service;
 
 import static java.lang.Math.random;
 

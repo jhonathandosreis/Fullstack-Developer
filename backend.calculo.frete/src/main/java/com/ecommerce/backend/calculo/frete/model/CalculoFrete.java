@@ -1,4 +1,4 @@
-package com.ecommerce.calculofrete.model;
+package com.ecommerce.backend.calculo.frete.model;
 
 public class CalculoFrete {
 	
