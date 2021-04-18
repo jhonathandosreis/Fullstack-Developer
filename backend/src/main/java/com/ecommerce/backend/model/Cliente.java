@@ -7,10 +7,6 @@ import javax.persistence.Id;
 public class Cliente {
 	
 	@Id
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 	/*
 	 * Atributos
 	 */
@@ -20,11 +16,8 @@ public class Cliente {
 	
 	/*
 	 * Construtores
+	 * Sobrecarga de métodos
 	 */
-<<<<<<< HEAD
-=======
-	
->>>>>>> master
 	public Cliente() {
 		
 	}

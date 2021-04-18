@@ -1,13 +1,9 @@
 package com.ecommerce.backend.model;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-=======
->>>>>>> master
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -16,10 +12,6 @@ import javax.persistence.ManyToOne;
 public class Pedido {
 
 	@Id
-<<<<<<< HEAD
-=======
-	
->>>>>>> master
 	/*
 	 * Atributos
 	 */
@@ -31,14 +23,10 @@ public class Pedido {
 	private int qntItens;
 	private Double valorTotal;
 	private Double valorFrete;
-	private List<Produto> produtos = new ArrayList();
 	
 	/*
 	 * Construtores
-<<<<<<< HEAD
 	 * Sobrecarga de métodos
-=======
->>>>>>> master
 	 */
 	public Pedido() {
 		
@@ -57,26 +45,14 @@ public class Pedido {
 		this.qntItens = pedido.getQntItens();
 		this.valorTotal = pedido.getValorTotal();
 		this.valorFrete = pedido.getValorFrete();
-		this.produtos = pedido.getProdutos().stream().map(produtosNoPedido -> new Produto(produtosNoPedido)).collect(Collectors.toList());
 	}
 	
 	/*
 	 * Getters and Setters
 	 */
-<<<<<<< HEAD
-	
-=======
->>>>>>> master
+
 	public String getId() {
 		return id;
-	}
-	
-	public List<Produto> getProdutos() {
-		return produtos;
-	}
-
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
 	}
 
 	public Cliente getCliente() {
