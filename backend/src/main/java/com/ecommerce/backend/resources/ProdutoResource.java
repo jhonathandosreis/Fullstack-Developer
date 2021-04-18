@@ -35,7 +35,7 @@ public class ProdutoResource {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Long id) {
+	public void delete(@PathVariable("id") String id) {
 		produtoRepository.deleteById(id);
 	}
 }

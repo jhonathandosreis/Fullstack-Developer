@@ -7,6 +7,10 @@ import javax.persistence.Id;
 public class Produto {
 	
 	@Id
+<<<<<<< HEAD
+=======
+	
+>>>>>>> master
 	/*
 	 * Atributos
 	 */
@@ -23,7 +27,11 @@ public class Produto {
 		
 	}
 	
+<<<<<<< HEAD
 	public Produto(String id, String codigo, String nome, long precoUnitario, String imagemUrl) {
+=======
+	public Produto(String id, String codigo, String nome, long precoUnitario, String imgUrl) {
+>>>>>>> master
 		this.id = id;
 		this.codigo = codigo;
 		this.nome = nome;

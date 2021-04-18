@@ -35,7 +35,7 @@ public class ClienteResource {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Long id) {
+	public void delete(@PathVariable String id) {
 		clienteRepository.deleteById(id);
 	}
 }

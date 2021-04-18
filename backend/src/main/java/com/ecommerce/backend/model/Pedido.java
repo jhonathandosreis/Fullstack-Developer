@@ -1,10 +1,13 @@
 package com.ecommerce.backend.model;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+=======
+>>>>>>> master
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -13,6 +16,10 @@ import javax.persistence.ManyToOne;
 public class Pedido {
 
 	@Id
+<<<<<<< HEAD
+=======
+	
+>>>>>>> master
 	/*
 	 * Atributos
 	 */
@@ -28,7 +35,10 @@ public class Pedido {
 	
 	/*
 	 * Construtores
+<<<<<<< HEAD
 	 * Sobrecarga de métodos
+=======
+>>>>>>> master
 	 */
 	public Pedido() {
 		
@@ -53,7 +63,10 @@ public class Pedido {
 	/*
 	 * Getters and Setters
 	 */
+<<<<<<< HEAD
 	
+=======
+>>>>>>> master
 	public String getId() {
 		return id;
 	}
