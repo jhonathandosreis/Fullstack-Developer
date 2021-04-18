@@ -15,27 +15,23 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ProdutoComponent } from './components/produto/produto.component';
-import { CadastroClienteComponent } from './pages/cadastro/cadastro-cliente/cadastro-cliente.component';
-import { CadastroProdutoComponent } from './pages/cadastro/cadastro-produto/cadastro-produto.component';
+import { ProdutoComponent } from './pages/produto/produto.component';
+import { CalculoValoresComponent } from './components/calculo-valores/calculo-valores.component';
+import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ConsultarPedidoComponent } from './pages/pedido/consultar-pedido/consultar-pedido.component';
 import { NovoPedidoComponent } from './pages/pedido/novo-pedido/novo-pedido.component';
-import { CalculoValoresComponent } from './components/calculo-valores/calculo-valores.component';
-import { CarrinhoComponent } from './components/carrinho/carrinho.component';
-import { ClienteComponent } from './components/cliente/cliente.component';
+import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ProdutoComponent,
-    CadastroClienteComponent,
-    CadastroProdutoComponent,
     ConsultarPedidoComponent,
     NovoPedidoComponent,
     CalculoValoresComponent,
-    CarrinhoComponent,
-    ClienteComponent
+    ClienteComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,

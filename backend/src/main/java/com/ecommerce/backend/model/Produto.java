@@ -31,6 +31,14 @@ public class Produto {
 		this.imagemUrl = imagemUrl;
 	}
 	
+	public Produto(Produto produto) {
+		this.id = produto.getId();
+		this.codigo = produto.getCodigo();
+		this.nome = produto.getNome();
+		this.precoUnitario = produto.getPrecoUnitario();
+		this.imagemUrl = produto.getImagemUrl();
+	}
+	
 	/*
 	 * Getters and Setters
 	 */

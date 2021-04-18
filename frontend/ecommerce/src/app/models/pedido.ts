@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente.model";
+import { Cliente } from "./cliente";
 
 export interface Pedido {
     numero: number;

@@ -27,6 +27,12 @@ public class Cliente {
 		this.nome = nome;
 	}
 	
+	public Cliente(Cliente cliente) {
+		this.id = cliente.getId();
+		this.codigo = cliente.getCodigo();
+		this.nome = cliente.getNome();
+	}
+	
 	/*
 	 * Getters and Setters
 	 */

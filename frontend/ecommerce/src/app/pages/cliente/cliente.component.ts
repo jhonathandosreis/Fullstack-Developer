@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { Cliente } from 'src/app/models/cliente';
 
 @Component({
   selector: 'app-cliente',
