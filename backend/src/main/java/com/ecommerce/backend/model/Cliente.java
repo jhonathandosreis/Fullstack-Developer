@@ -7,7 +7,6 @@ import javax.persistence.Id;
 public class Cliente {
 	
 	@Id
-
 	/*
 	 * Atributos
 	 */
@@ -17,8 +16,8 @@ public class Cliente {
 	
 	/*
 	 * Construtores
+	 * Sobrecarga de métodos
 	 */
-	
 	public Cliente() {
 		
 	}
@@ -27,6 +26,12 @@ public class Cliente {
 		this.id = id;
 		this.codigo = codigo;
 		this.nome = nome;
+	}
+	
+	public Cliente(Cliente cliente) {
+		this.id = cliente.getId();
+		this.codigo = cliente.getCodigo();
+		this.nome = cliente.getNome();
 	}
 	
 	/*

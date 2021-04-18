@@ -7,7 +7,6 @@ import javax.persistence.Id;
 public class Produto {
 	
 	@Id
-	
 	/*
 	 * Atributos
 	 */
@@ -15,29 +14,38 @@ public class Produto {
 	private String codigo;
 	private String nome;
 	private long precoUnitario;
-	private String imgUrl;
+	private String imagemUrl;
 	
 	/*
 	 * Construtores
+	 * Sobrecarga de métodos
 	 */
 	public Produto() {
 		
 	}
 	
-	public Produto(String id, String codigo, String nome, long precoUnitario, String imgUrl) {
+	public Produto(String id, String codigo, String nome, long precoUnitario, String imagemUrl) {
 		this.id = id;
 		this.codigo = codigo;
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;
-		this.imgUrl = imgUrl;
+		this.imagemUrl = imagemUrl;
 	}
-
+	
+	public Produto(Produto produto) {
+		this.id = produto.getId();
+		this.codigo = produto.getCodigo();
+		this.nome = produto.getNome();
+		this.precoUnitario = produto.getPrecoUnitario();
+		this.imagemUrl = produto.getImagemUrl();
+	}
+	
 	/*
 	 * Getters and Setters
 	 */
 	public String getId() {
 		return id;
-	}	
+	}
 	
 	public String getCodigo() {
 		return codigo;
@@ -63,11 +71,11 @@ public class Produto {
 		this.precoUnitario = precoUnitario;
 	}
 	
-	public String getImgUrl() {
-		return imgUrl;
+	public String getImagemUrl() {
+		return imagemUrl;
 	}
 
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
+	public void setImagemUrl(String imagemUrl) {
+		this.imagemUrl = imagemUrl;
 	}
 }

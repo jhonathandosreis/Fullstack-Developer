@@ -1,5 +1,9 @@
 package com.ecommerce.backend.model;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -8,7 +12,6 @@ import javax.persistence.ManyToOne;
 public class Pedido {
 
 	@Id
-	
 	/*
 	 * Atributos
 	 */
@@ -23,6 +26,7 @@ public class Pedido {
 	
 	/*
 	 * Construtores
+	 * Sobrecarga de métodos
 	 */
 	public Pedido() {
 		
@@ -36,9 +40,17 @@ public class Pedido {
 		this.valorFrete = valorFrete;
 	}
 	
+	public Pedido(Pedido pedido) {
+		this.id = pedido.getId();
+		this.qntItens = pedido.getQntItens();
+		this.valorTotal = pedido.getValorTotal();
+		this.valorFrete = pedido.getValorFrete();
+	}
+	
 	/*
 	 * Getters and Setters
 	 */
+
 	public String getId() {
 		return id;
 	}
