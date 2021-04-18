@@ -1,25 +1,18 @@
 package com.ecommerce.backend.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Pedido implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
+public class Pedido {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	/*
 	 * Atributos
 	 */
-	private long id;
+	private String id;
 	
 	@ManyToOne
 	private Cliente Cliente;
@@ -29,9 +22,13 @@ public class Pedido implements Serializable {
 	private Double valorFrete;
 	
 	/*
-	 * Construtor
+	 * Construtores
 	 */
-	public Pedido(long id, int qntItens, Double valorTotal, Double valorFrete) {
+	public Pedido() {
+		
+	}
+	
+	public Pedido(String id, int qntItens, Double valorTotal, Double valorFrete) {
 		
 		this.id = id;
 		this.qntItens = qntItens;
@@ -42,7 +39,7 @@ public class Pedido implements Serializable {
 	/*
 	 * Getters and Setters
 	 */
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 

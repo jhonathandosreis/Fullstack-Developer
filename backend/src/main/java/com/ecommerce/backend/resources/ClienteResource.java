@@ -29,18 +29,13 @@ public class ClienteResource {
 		return clienteRepository.findAll();
 	}
 	
-	@PostMapping("/{id}")
+	@PostMapping
 	public void post(@RequestBody Cliente cliente) {
 		clienteRepository.save(cliente);
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") Long id) {
+	public void delete(@PathVariable String id) {
 		clienteRepository.deleteById(id);
-	}
-	
-	@PutMapping
-	public void put(@RequestBody Cliente cliente) {
-		clienteRepository.save(cliente);
 	}
 }
