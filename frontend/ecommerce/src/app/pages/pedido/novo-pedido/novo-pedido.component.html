@@ -1,0 +1,53 @@
+<div class="container" fxFlex="100" fxLayout="column" fxLayoutAlign="center start">
+
+    <mat-label class="labelPedido">Novo pedido #</mat-label>
+
+    <div id="separator">
+    </div>
+
+    <app-cliente ></app-cliente>
+
+    <div id="separator">
+    </div>
+
+    <app-carrinho ></app-carrinho>
+
+    <div id="separator">
+    </div>
+
+    <mat-card class="total" fxLayout="column" fxFlex="100">
+        <mat-card-title>
+            <mat-label class="total"><img [src]="iconTotal" alt="image" width="20" height="20"> Total</mat-label>
+        </mat-card-title>
+        <mat-card-content>
+            <form>
+                <div class="valores" fxFlex="100" fxLayout="row">
+                    <div fxFlexOffset="1.7" fxFlex="90" fxLayout="row">
+                        <div fxLayout="column" fxFlex="100" fxLayoutAlign="space-around start">
+                            <mat-label>Itens:</mat-label>
+                            <mat-label>Frete:</mat-label>
+                            <mat-divider [inset]=" true">
+                            </mat-divider>
+                            <mat-label>Total:</mat-label>
+                        </div>
+                        <div fxLayout="column" fxFlex="20" fxLayoutAlign="space-around end">
+                            <mat-label></mat-label>
+                            <mat-label></mat-label>
+                            <mat-divider [inset]=" true">
+                            </mat-divider>
+                            <mat-label></mat-label>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex="40" fxLayout="column" fxLayoutAlign="center">
+                    <button mat-raised-button aria-label="finalizar" type="submit"
+                        type="button">
+                        Finalizar Pedido
+                    </button>
+                    <button class="limpar" mat-raised-button > Limpar carrinho</button>
+                </div>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

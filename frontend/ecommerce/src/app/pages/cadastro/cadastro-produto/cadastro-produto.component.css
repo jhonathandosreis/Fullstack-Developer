@@ -1,0 +1,46 @@
+mat-card{    
+    padding: 25px;
+    width: 700px;
+    min-width: 700px;
+    min-width: 300px;
+}
+
+.container{  
+  padding: 80px;
+  padding-top: 50px;
+ }
+
+ .delete:hover{
+  top:-2px;box-shadow:0 2px 2px #666;
+  background-color: grey;
+  cursor: pointer; 
+ }
+
+  button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #5CB85C;
+    color: #FFFFFF ;
+  }
+
+  mat-form-field{
+   padding-top: 10px;   
+    width: 100%
+  }
+
+  mat-card-title{
+      font-size: 20px;
+  }
+
+  table {
+    padding: 25px;    
+    width: 100%; 
+    min-width: 300px;
+    max-width: 700px;
+  }
+
+  #labelListaProdutos{
+    margin-top: 50px;
+    margin-bottom: 5px;  
+    max-width: 700px;
+  }
