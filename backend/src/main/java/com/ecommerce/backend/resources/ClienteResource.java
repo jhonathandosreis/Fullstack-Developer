@@ -33,8 +33,8 @@ public class ClienteResource {
 		clienteRepository.save(cliente);
 	}
 	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable String id) {
-		clienteRepository.deleteById(id);
+	@DeleteMapping("/{codigo}")
+	public void delete(@PathVariable Long codigo) {
+		clienteRepository.deleteById(codigo);
 	}
 }

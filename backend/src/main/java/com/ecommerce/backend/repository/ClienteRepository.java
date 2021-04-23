@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ecommerce.backend.model.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, String>{
+public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
 }

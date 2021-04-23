@@ -1,10 +1,8 @@
 package com.ecommerce.backend.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -12,10 +10,11 @@ import javax.persistence.ManyToOne;
 public class Pedido {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	/*
 	 * Atributos
 	 */
-	private String id;
+	private Long id;
 	
 	@ManyToOne
 	private Cliente Cliente;
@@ -32,7 +31,7 @@ public class Pedido {
 		
 	}
 	
-	public Pedido(String id, int qntItens, Double valorTotal, Double valorFrete) {
+	public Pedido(Long id, int qntItens, Double valorTotal, Double valorFrete) {
 		
 		this.id = id;
 		this.qntItens = qntItens;
@@ -51,7 +50,7 @@ public class Pedido {
 	 * Getters and Setters
 	 */
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 

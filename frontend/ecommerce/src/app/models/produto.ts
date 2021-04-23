@@ -1,5 +1,5 @@
-export interface Produto {
-    codigo: string;
-    nome: string;
-    precoUnitario: number;
+export class Produto {
+    codigo: any;
+    nome: any;
+    precoUnitario: any;
   }

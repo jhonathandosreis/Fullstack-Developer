@@ -33,8 +33,8 @@ public class ProdutoResource {
 		produtoRepository.save(produto);
 	}
 	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") String id) {
-		produtoRepository.deleteById(id);
+	@DeleteMapping("/{codigo}")
+	public void delete(@PathVariable("codigo") Long codigo) {
+		produtoRepository.deleteById(codigo);
 	}
 }

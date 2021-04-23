@@ -1,17 +1,19 @@
 package com.ecommerce.backend.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Cliente {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	/*
 	 * Atributos
 	 */
-	private String id;
-	private String codigo;
+	private Long codigo;
 	private String nome;
 	
 	/*
@@ -22,14 +24,12 @@ public class Cliente {
 		
 	}
 	
-	public Cliente(String id, String codigo, String nome) {
-		this.id = id;
+	public Cliente(Long codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
 	
 	public Cliente(Cliente cliente) {
-		this.id = cliente.getId();
 		this.codigo = cliente.getCodigo();
 		this.nome = cliente.getNome();
 	}
@@ -37,16 +37,8 @@ public class Cliente {
 	/*
 	 * Getters and Setters
 	 */
-	public String getId() {
-		return id;
-	}
-
-	public String getCodigo() {
+	public Long getCodigo() {
 		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 
 	public String getNome() {
