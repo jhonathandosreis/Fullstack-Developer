@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CarrinhoValores } from 'src/app/models/carrinho-valores';
 import { CarrinhoProduto } from 'src/app/models/produtos-carrinho';
 import { CarrinhoService } from 'src/app/services/carrinho.service';
@@ -13,6 +13,8 @@ export class CarrinhoComponent implements OnInit {
   iconCarrinho = 'assets/icones/icone-carrinho.png';
   produtos: CarrinhoProduto[] = [];
   produtosComValorCalculado: CarrinhoValores[] = [];
+
+  @Output() carrinhoDeCompras = new EventEmitter();
   
   constructor(private carrinhoService: CarrinhoService) { }
 
@@ -22,6 +24,6 @@ export class CarrinhoComponent implements OnInit {
 
   addCarrinho(evento: CarrinhoProduto) {
     this.carrinhoService.getProdutoByEvent(evento);
-    console.log(evento.nome);
+    this.carrinhoDeCompras.emit({ carrinho: this.produtosComValorCalculado });
   }
 }

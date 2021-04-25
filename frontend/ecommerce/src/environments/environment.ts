@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:8080',
-  freteApi: 'http://localhost:8080/calculo-frete'
+  freteApi: 'http://localhost:9090/calculo-frete'
 };
 
 /*

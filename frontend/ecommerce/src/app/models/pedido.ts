@@ -1,9 +1,9 @@
 import { Cliente } from './cliente';
 
 export class Pedido {
-  numero: any;
+  id: any;
   qntItens: any;
   valorFrete: any;
   valorTotal: any;
-  cliente: Cliente = new Cliente;
+  cliente: any;
 }

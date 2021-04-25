@@ -34,7 +34,7 @@ public class PedidoResources {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable("id") String id) {
+	public void delete(@PathVariable Long id) {
 		pedidoRepository.deleteById(id);
 	}
 }

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Event } from '@angular/router';
 import { CarrinhoProduto } from '../models/produtos-carrinho';
 
 @Injectable({
@@ -12,10 +11,13 @@ export class CarrinhoService {
   constructor() { }
 
   getProdutoByEvent(evento: CarrinhoProduto) {
-    this.produtos.push(evento);
+    if (!this.produtos.find(x => x.codigo === evento.codigo)) {
+      this.produtos.push(evento);
+    }
   }
 
   getProdutos() {
     return this.produtos;
   }
+  
 }

@@ -22,6 +22,7 @@ export class CadastroProdutoComponent implements OnInit {
     codigo: '',
     nome: '',
     precoUnitario: '',
+    imageUrl: ''
   };
 
   constructor(private formBuilder: FormBuilder,private produtoService: ProdutoService) { }

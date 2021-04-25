@@ -1,6 +1,6 @@
 <div class="container" fxFlex="100" fxLayout="column" fxLayoutAlign="center start">
 
-    <mat-label class="labelPedido">Novo pedido #</mat-label>
+    <mat-label class="labelPedido">Novo pedido # {{numero}}.202104</mat-label>
 
     <div id="separator">
     </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div fxFlex="40" fxLayout="column" fxLayoutAlign="center">
-                    <button mat-raised-button aria-label="finalizar" type="submit"
+                    <button mat-raised-button aria-label="finalizar" (click)="finalizarPedido()"type="submit"
                         type="button">
                         Finalizar Pedido
                     </button>

@@ -16,7 +16,7 @@ export class ProdutoComponent implements OnInit {
   formulario = new FormControl();
   listProdutos!: Produto[];
   selectedProduto: any;
-  @Output() produtoIsSelected = new EventEmitter();
+  @Output() produtoSelecionado = new EventEmitter();
   produto$!: Observable<string[]>;
 
   constructor(private produtoService: ProdutoService) { }
@@ -34,7 +34,6 @@ export class ProdutoComponent implements OnInit {
 
   onSubmit() {
     this.selectedProduto = this.listProdutos.find(buscado => buscado.nome == this.formulario.value);
-    this.produtoIsSelected.emit({produto: this.selectedProduto});
-    console.log(this.selectedProduto);
+    this.produtoSelecionado.emit({produto: this.selectedProduto});
   }
 }
