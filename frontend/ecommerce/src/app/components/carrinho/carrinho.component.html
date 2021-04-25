@@ -1,13 +1,16 @@
 <mat-card fxLayout="column" fxFlex="100">
     <mat-card-title>
-        <mat-label class="carrinho"><img [src]="iconCarrinho" alt="image" width="20" height="20"> Carrinho</mat-label></mat-card-title>
+        <mat-label class="carrinho"><img [src]="iconCarrinho" alt="image" width="20" height="20"> Carrinho</mat-label>
+    </mat-card-title>
     <mat-card-content>
-
+        <app-produto (produtoIsSelected)="addCarrinho($event.produto)"> </app-produto>
         <mat-card id="produtosCarrinho" *ngFor="let prod of produtos" class="item-shopping-cart">
             <div fxFlex="85">
+                <mat-card-subtitle>{{prod.codigo}}</mat-card-subtitle>
+                <mat-card-title><strong>{{prod.nome}}</strong></mat-card-title>
             </div>
             <div class="calculos" fxFlex="15">
-                <app-calculo-valores></app-calculo-valores>
+                <app-calculo-valores>  </app-calculo-valores>
             </div>
         </mat-card>
         <div fxLayoutAlign="center" *ngIf="produtos.length === 0">

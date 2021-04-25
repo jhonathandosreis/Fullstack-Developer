@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs/internal/Observable';
 import { Cliente } from 'src/app/models/cliente';
+import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
   selector: 'app-cliente',
@@ -10,18 +10,28 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class ClienteComponent implements OnInit {
 
-  
   iconCliente = 'assets/icones/icone-cliente.png';
 
   options: string[] = [];
   formulario = new FormControl();
-  clientes$!: Observable<string[]>;
   listClientes: Cliente[] = [];
   selectedCliente: any;
+  @Output() clienteIsSelected = new EventEmitter();
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
+    this.listarClientes();
   }
 
+  listarClientes() {
+    this.clienteService.findAll().subscribe(r => {
+      this.listClientes = r;
+    })
+  }
+
+  onSubmit() {
+    this.selectedCliente = this.listClientes.find(buscado => buscado.nome == this.formulario.value);
+    this.clienteIsSelected.emit({cliente: this.selectedCliente});
+  }
 }

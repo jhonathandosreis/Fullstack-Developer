@@ -21,7 +21,7 @@ export class CadastroProdutoComponent implements OnInit {
   novoProduto: Produto = {
     codigo: '',
     nome: '',
-    precoUnitario: 1,
+    precoUnitario: '',
   };
 
   constructor(private formBuilder: FormBuilder,private produtoService: ProdutoService) { }

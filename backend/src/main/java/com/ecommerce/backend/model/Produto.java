@@ -7,34 +7,34 @@ import javax.persistence.Id;
 
 @Entity
 public class Produto {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	/*
-	 * Atributos
-	 */
+	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private Long codigo;
 	private String nome;
 	private long precoUnitario;
+	private String imagemUrl;
 	
 	/*
 	 * Construtores
-	 * Sobrecarga de métodos
 	 */
 	public Produto() {
 		
 	}
 	
-	public Produto(Long codigo, String nome, long precoUnitario) {
+	public Produto(Long codigo, String nome, long precoUnitario, String imageUrl) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;
+		this.imagemUrl = imageUrl;
 	}
 	
 	public Produto(Produto produto) {
 		this.codigo = produto.getCodigo();
 		this.nome = produto.getNome();
 		this.precoUnitario = produto.getPrecoUnitario();
+		this.imagemUrl = produto.getImagemUrl();
 	}
 	
 	/*
@@ -59,5 +59,12 @@ public class Produto {
 	public void setPrecoUnitario(long precoUnitario) {
 		this.precoUnitario = precoUnitario;
 	}
-	
+
+	public String getImagemUrl() {
+		return imagemUrl;
+	}
+
+	public void setImagemUrl(String imagemUrl) {
+		this.imagemUrl = imagemUrl;
+	}
 }

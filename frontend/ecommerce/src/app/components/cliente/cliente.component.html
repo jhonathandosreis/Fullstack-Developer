@@ -5,14 +5,14 @@
     <mat-card-content>
         <mat-form-field appearance="outline" fxFlex="50">
             <mat-label>Informe um cliente *</mat-label>
-            <input matInput placeholder="Nome do cliente" [matAutocomplete]="auto">
+            <input matInput placeholder="Nome do cliente" [matAutocomplete]="auto" [formControl]="formulario">
             <button mat-button *ngIf="selectedCliente" matSuffix mat-icon-button aria-label="Clear"
                 (click)="formulario.reset()">
                 <mat-icon>close</mat-icon>
             </button>
-            <mat-autocomplete #auto="matAutocomplete" >
-                <mat-option *ngFor=" let option of options" [value]="option">
-                    {{option}}
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSubmit()">
+                <mat-option *ngFor=" let cliente of listClientes" [value]="cliente.nome">
+                    {{cliente.nome}}
                 </mat-option>
             </mat-autocomplete>
             <mat-icon matSuffix *ngIf="!selectedCliente">search</mat-icon>

@@ -34,7 +34,7 @@ public class ProdutoResource {
 	}
 	
 	@DeleteMapping("/{codigo}")
-	public void delete(@PathVariable("codigo") Long codigo) {
+	public void delete(@PathVariable Long codigo) {
 		produtoRepository.deleteById(codigo);
 	}
 }

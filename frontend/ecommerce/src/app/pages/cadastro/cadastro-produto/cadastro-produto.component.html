@@ -11,7 +11,7 @@
 
                 <mat-form-field appearance="outline">
                     <mat-label>Preço</mat-label>
-                    <input matInput placeholder="Preço do produto" formControlName="precoUnitario">
+                    <input matInput placeholder="Preço do produto"  [(ngModel)]="novoProduto.precoUnitario" formControlName="precoUnitario">
                     <mat-icon matSuffix>attach_money</mat-icon>
                 </mat-form-field>
             </form>

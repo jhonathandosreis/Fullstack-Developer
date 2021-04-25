@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+
 import { Produto } from 'src/app/models/produto';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-produto',
@@ -12,13 +14,27 @@ export class ProdutoComponent implements OnInit {
 
   options: string[] = [];
   formulario = new FormControl();
-  produto$!: Observable<string[]>;
   listProdutos!: Produto[];
   selectedProduto: any;
+  @Output() produtoIsSelected = new EventEmitter();
+  produto$!: Observable<string[]>;
 
-  constructor() { }
+  constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
+    this.listarProdutos();
+    this.produto$ = this.formulario.value;
   }
 
+  listarProdutos() {
+    this.produtoService.findAll().subscribe(r => {
+      this.listProdutos = r;
+    });
+  }
+
+  onSubmit() {
+    this.selectedProduto = this.listProdutos.find(buscado => buscado.nome == this.formulario.value);
+    this.produtoIsSelected.emit({produto: this.selectedProduto});
+    console.log(this.selectedProduto);
+  }
 }

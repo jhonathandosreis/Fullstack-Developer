@@ -1,9 +1,9 @@
 import { Cliente } from './cliente';
 
-export interface Pedido {
-  numero: string;
-  qntItens: number;
-  valorFrete: number;
-  valorTotal: number;
-  cliente: Cliente;
+export class Pedido {
+  numero: any;
+  qntItens: any;
+  valorFrete: any;
+  valorTotal: any;
+  cliente: Cliente = new Cliente;
 }

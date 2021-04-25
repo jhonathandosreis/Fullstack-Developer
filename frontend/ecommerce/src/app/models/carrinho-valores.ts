@@ -1,5 +1,7 @@
-export interface CarrinhoValores {
-    codigoProduto: string;
-    quantidadeTotalDeItens: number;
-    valorTotalDeItens: number;
+export class CarrinhoValores {
+    codigoProduto: any;
+    quantidadeTotalDeItens: any;
+    valorTotalDeItens: any;
+    precoUnitario: any;
+    
 }

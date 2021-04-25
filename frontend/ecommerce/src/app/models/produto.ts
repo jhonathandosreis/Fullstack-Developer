@@ -1,5 +1,5 @@
 export class Produto {
-    codigo: any;
-    nome: any;
-    precoUnitario: any;
-  }
+  codigo: any;
+  nome: any;
+  precoUnitario: any;
+}

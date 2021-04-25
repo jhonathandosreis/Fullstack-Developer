@@ -1,6 +1,7 @@
 package com.ecommerce.backend.resources;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -34,7 +35,7 @@ public class ClienteResource {
 	}
 	
 	@DeleteMapping("/{codigo}")
-	public void delete(@PathVariable Long codigo) {
+	public void delete(@PathVariable UUID codigo) {
 		clienteRepository.deleteById(codigo);
 	}
 }

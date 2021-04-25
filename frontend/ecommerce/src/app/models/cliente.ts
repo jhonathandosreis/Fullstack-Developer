@@ -1,4 +1,4 @@
 export class Cliente {
-    codigo: any;
-    nome: any;
-  }
+  codigo: any;
+  nome: any;
+}

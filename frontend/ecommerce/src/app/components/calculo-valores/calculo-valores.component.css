@@ -1,0 +1,18 @@
+mat-form-field{
+    width: 1px;
+    height: 1px;
+}
+
+mat-label{
+    margin-left: 5px;
+}
+
+.total{
+    font-size: 20px;    
+    font-family: Euclid Circular B-Light;  
+}
+
+.calculos{    
+    font-size: 16px;    
+    font-family: Euclid Circular B-Light; 
+}

@@ -1,5 +1,4 @@
 mat-card{    
-    width: 100%;
     padding: 25px;
     min-width: 700px;
 }
@@ -25,7 +24,6 @@ app-carrinho {
 }
 
 .total{    
-    width: 96%;
     min-width: 700px;
     min-height: 250px;
 }

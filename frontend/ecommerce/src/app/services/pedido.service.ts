@@ -14,15 +14,15 @@ export class PedidoService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Pedido[]> {
-    return this.http.get<Pedido[]>(this.baseUrl);
+    return this.http.get<Pedido[]>(`${this.baseUrl}/produto`);
   }
 
   create(pedido: Pedido): Observable<Pedido> {
-    return this.http.post<Pedido>(this.baseUrl, pedido);
+    return this.http.post<Pedido>(`${this.baseUrl}/produto`, pedido);
   }
 
   delete(id: any): Observable<void> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/produto/${id}`
     return this.http.delete<void>(url);
   }
 
